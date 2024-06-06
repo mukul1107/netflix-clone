@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-    height: 75vh;
+    height: 85vh;
     /* max-width: max(1200px, 80vw); */
     background-size: max(1200px, 100vw);
     background-image: url(../assets/images/main-bg.jpg);
@@ -28,7 +28,7 @@ body {
 .container .box {
     position: absolute;
     top: 0;
-    height: 75vh;
+    height: 85vh;
     width: 100%;
     opacity: 0.44;
     background-color: black;
@@ -113,6 +113,14 @@ body {
     padding: 15px 21px;
     font-size: 20px;
 }
+
+.btn-red:hover{
+    font-size: 24px;
+    font-weight: 900;
+    padding: 11px 17px;
+    transition: 0.2s ease-out;
+}
+
 .inp{
     display: flex;
     align-items: center;
@@ -121,7 +129,7 @@ body {
     flex-wrap: wrap;
 }
 .inp > input{
-    padding: 1.1rem 1.3rem 0.5rem;
+    padding:13px 23px;
     background-color:  rgba(23,23,23,0.7);
     border-radius: calc(0.25rem - 0.0625rem);
     font-size: 20px;
