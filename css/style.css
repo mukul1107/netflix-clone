@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-    height: 85vh;
+    height: calc(85vh);
     /* max-width: max(1200px, 80vw); */
     background-size: max(1200px, 100vw);
     background-image: url(../assets/images/main-bg.jpg);
@@ -27,8 +27,9 @@ body {
 
 .container .box {
     position: absolute;
+
     top: 0;
-    height: 85vh;
+    height: calc(85vh);
     width: 100%;
     opacity: 0.44;
     background-color: black;
@@ -49,12 +50,13 @@ body {
     height: 62px;
     /* background-color: red; */
     margin: auto;
+    top: 20px;
     max-width: 60vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
-    /* z-index: 10; */
+    z-index: 10;
 }
 
 .heroText {
@@ -98,13 +100,18 @@ body {
     /* width: 100vw; */
 }
 
+.buttons :first-child {
+    background-color: rgba(23, 23, 23, 0.7);
+}
+
 .btn {
-    padding: 3px 8px;
+    padding: 8px 10px 8px 10px;
     color: white;
-    background-color: black;
-    font-weight: bold;
+    background-color: rgba(23, 23, 23, 0.7);
+    font-weight: 400;
+    font-size: 15px;
     border-radius: calc(0.25rem - 0.0625rem);
-    border: rgb(0, 0, 0);
+    border: rgba(23, 23, 23, 0.7);
 }
 
 .btn-red {
@@ -114,31 +121,124 @@ body {
     font-size: 20px;
 }
 
-.btn-red:hover{
+.btn-red:hover {
     font-size: 24px;
     font-weight: 900;
     padding: 11px 17px;
     transition: 0.2s ease-out;
 }
 
-.inp{
+.inp {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 13px;
     flex-wrap: wrap;
 }
-.inp > input{
-    padding:13px 23px;
-    background-color:  rgba(23,23,23,0.7);
+
+.inp>input {
+    padding: 13px 23px;
+    background-color: rgba(23, 23, 23, 0.7);
     border-radius: calc(0.25rem - 0.0625rem);
     font-size: 20px;
-  
-    border:1px solid rgba(246, 238, 238, 0.5);
+
+    border: 1px solid rgba(246, 238, 238, 0.5);
 }
-input::placeholder{
+
+input::placeholder {
     color: rgba(255, 255, 255, 0.582);
 }
+
 .btn-red-sn {
     background-color: #C11119;
+}
+
+.card-section {
+    height: 85vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-section span {
+    color: var(--text-color);
+}
+
+.text {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    max-width: 32%;
+    gap: 15px;
+}
+
+/* .image>img {
+        width: 100%;
+        } */
+
+.image {
+    position: relative;
+    height: 80%;
+    max-width: 50%;
+    position: relative;
+}
+
+.image img {
+    z-index: 11;
+    /* height: inherit; */
+    width: 30vw;
+    position: relative;
+}
+
+.image video{
+    position: absolute;
+    top: 1px;
+    right: 0;
+    width: 29vw;
+}
+.text> :first-child {
+    font-size: 48px;
+    font-weight: 900;
+
+}
+
+.text> :nth-child(2){
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.dwnl-box{
+    z-index: 12;
+    position: absolute;
+    height: 11vh;
+    width: 20vw;
+    padding: 1px 1px 2px 1px;
+    border: 1px solid var(--text-color);
+    left: 17%;
+    bottom: 40%;
+    background-color: black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dwnl-box>div img{
+    position: relative;
+    top: 5px;
+    /* left: 8px; */
+    width: 57px;
+    height: 76px;
+}
+
+.dwnl-box> .txt-str{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    right:  32px;
+}
+.dwnl-box> .txt-str :nth-child(2){
+    color: #0071eb;
 }
